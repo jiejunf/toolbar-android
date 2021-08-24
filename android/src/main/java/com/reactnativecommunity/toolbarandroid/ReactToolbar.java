@@ -29,6 +29,9 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.uimanager.PixelUtil;
 
+import java.util.Map;
+import java.util.HashMap;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
@@ -128,7 +131,12 @@ public class ReactToolbar extends Toolbar {
     public QualityInfo getQualityInfo() {
       return null;
     }
-
+    
+    @Override
+    @Nonnull
+    public Map<String, Object> getExtras(){
+      return new HashMap<String, Object>();
+    }
   }
 
   public ReactToolbar(Context context) {
